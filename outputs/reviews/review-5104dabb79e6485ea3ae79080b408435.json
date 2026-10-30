@@ -1,0 +1,29 @@
+{
+  "case_id": "feb-120",
+  "status": "WAITING_FOR_REVIEW",
+  "reviewer": "course-reviewer",
+  "destination": "local-review-queue",
+  "draft": {
+    "decision": "eligible",
+    "policy_id": "policy-jan",
+    "explanation": "The receipt is verified and the expense amount is 12,000 cents, which is within the policy-jan limit of 15,000 cents. Approval remains pending."
+  },
+  "draft_sha256": "feb60d780b35f1496f1097ac25e5db699ba47a203735f6df944cd929fa9dc4ce",
+  "context": {
+    "expense": {
+      "date": "2026-02-10",
+      "amount_cents": 12000,
+      "receipt_verified": true,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policy": {
+      "id": "policy-jan",
+      "valid_from": "2026-01-01",
+      "valid_to": "2026-03-01",
+      "limit_cents": 15000
+    },
+    "approval_status": "PENDING"
+  },
+  "context_sha256": "5e5192e46e89cfe401080603a02ba43eb2a893c379e4d30756de246337dee07d",
+  "response_id": "resp_038ab4536c2e3046016ae3f693cfdc87d29761cf501fba58c8"
+}

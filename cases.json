@@ -1,0 +1,208 @@
+[
+  {
+    "id": "feb-120",
+    "expense": {
+      "date": "2026-02-10",
+      "amount_cents": 12000,
+      "receipt_verified": true,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policies": [
+      {
+        "id": "policy-jan",
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-03-01",
+        "limit_cents": 15000
+      },
+      {
+        "id": "policy-mar",
+        "valid_from": "2026-03-01",
+        "valid_to": null,
+        "limit_cents": 10000
+      }
+    ],
+    "expected_decision": "eligible",
+    "expected_policy": "policy-jan"
+  },
+  {
+    "id": "mar-120",
+    "expense": {
+      "date": "2026-03-10",
+      "amount_cents": 12000,
+      "receipt_verified": true,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policies": [
+      {
+        "id": "policy-jan",
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-03-01",
+        "limit_cents": 15000
+      },
+      {
+        "id": "policy-mar",
+        "valid_from": "2026-03-01",
+        "valid_to": null,
+        "limit_cents": 10000
+      }
+    ],
+    "expected_decision": "ineligible",
+    "expected_policy": "policy-mar"
+  },
+  {
+    "id": "feb-200",
+    "expense": {
+      "date": "2026-02-10",
+      "amount_cents": 20000,
+      "receipt_verified": true,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policies": [
+      {
+        "id": "policy-jan",
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-03-01",
+        "limit_cents": 15000
+      },
+      {
+        "id": "policy-mar",
+        "valid_from": "2026-03-01",
+        "valid_to": null,
+        "limit_cents": 10000
+      }
+    ],
+    "expected_decision": "ineligible",
+    "expected_policy": "policy-jan"
+  },
+  {
+    "id": "missing-receipt",
+    "expense": {
+      "date": "2026-02-10",
+      "amount_cents": 12000,
+      "receipt_verified": false,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policies": [
+      {
+        "id": "policy-jan",
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-03-01",
+        "limit_cents": 15000
+      },
+      {
+        "id": "policy-mar",
+        "valid_from": "2026-03-01",
+        "valid_to": null,
+        "limit_cents": 10000
+      }
+    ],
+    "expected_decision": "needs_review",
+    "expected_policy": "policy-jan"
+  },
+  {
+    "id": "feb-limit-150",
+    "expense": {
+      "date": "2026-02-10",
+      "amount_cents": 15000,
+      "receipt_verified": true,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policies": [
+      {
+        "id": "policy-jan",
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-03-01",
+        "limit_cents": 15000
+      },
+      {
+        "id": "policy-mar",
+        "valid_from": "2026-03-01",
+        "valid_to": null,
+        "limit_cents": 10000
+      }
+    ],
+    "expected_decision": "eligible",
+    "expected_policy": "policy-jan"
+  },
+  {
+    "id": "mar-limit-100",
+    "expense": {
+      "date": "2026-03-10",
+      "amount_cents": 10000,
+      "receipt_verified": true,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policies": [
+      {
+        "id": "policy-jan",
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-03-01",
+        "limit_cents": 15000
+      },
+      {
+        "id": "policy-mar",
+        "valid_from": "2026-03-01",
+        "valid_to": null,
+        "limit_cents": 10000
+      }
+    ],
+    "expected_decision": "eligible",
+    "expected_policy": "policy-mar"
+  },
+  {
+    "id": "before-policy",
+    "expense": {
+      "date": "2025-12-15",
+      "amount_cents": 8000,
+      "receipt_verified": true,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policies": [
+      {
+        "id": "policy-jan",
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-03-01",
+        "limit_cents": 15000
+      },
+      {
+        "id": "policy-mar",
+        "valid_from": "2026-03-01",
+        "valid_to": null,
+        "limit_cents": 10000
+      }
+    ],
+    "expected_decision": "needs_review",
+    "expected_policy": null
+  },
+  {
+    "id": "overlap-policy",
+    "expense": {
+      "date": "2026-02-10",
+      "amount_cents": 8000,
+      "receipt_verified": true,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policies": [
+      {
+        "id": "policy-jan",
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-03-01",
+        "limit_cents": 15000
+      },
+      {
+        "id": "policy-mar",
+        "valid_from": "2026-03-01",
+        "valid_to": null,
+        "limit_cents": 10000
+      },
+      {
+        "id": "policy-overlap",
+        "valid_from": "2026-02-01",
+        "valid_to": "2026-02-20",
+        "limit_cents": 20000
+      }
+    ],
+    "expected_decision": "needs_review",
+    "expected_policy": null
+  }
+]
