@@ -1,0 +1,29 @@
+{
+  "case_id": "feb-120",
+  "status": "WAITING_FOR_REVIEW",
+  "reviewer": "course-reviewer",
+  "destination": "local-review-queue",
+  "draft": {
+    "decision": "needs_review",
+    "policy_id": "policy-mar",
+    "explanation": "Receipt is verified and the expense amount is 12,000 cents, but the supplied policy is only valid from 2026-03-01 and this expense is dated 2026-02-10, so the policy timing does not match this expense. Approval remains pending."
+  },
+  "draft_sha256": "5bbcb7b5fa9b05822bc587f1dff34862104340990df4d3b43d0822ec60e9e325",
+  "context": {
+    "expense": {
+      "date": "2026-02-10",
+      "amount_cents": 12000,
+      "receipt_verified": true,
+      "note": "Illustrative local transport expense. Approval is pending."
+    },
+    "policy": {
+      "id": "policy-mar",
+      "valid_from": "2026-03-01",
+      "valid_to": null,
+      "limit_cents": 10000
+    },
+    "approval_status": "PENDING"
+  },
+  "context_sha256": "148687666b398393278ba8c5d517ea7fd0218abc63f7a6eb65b4867d07a428f3",
+  "response_id": "resp_02bca4e8653ca16e016aed3bef37c487d2a5653c5d79c9da5d"
+}
