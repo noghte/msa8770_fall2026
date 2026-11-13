@@ -1,0 +1,9 @@
+id,isbn,note,expected_relevant
+B01,9781491957660,Python tools for manipulating and analyzing datasets.,true
+B02,9781449373320,"Storage systems, distributed data, and reliable data applications.",true
+B03,9781492032649,Building and training machine learning models.,true
+B04,9780451524935,A dystopian novel about surveillance and political control.,false
+B05,9780141439518,"A novel about courtship, family, and social class.",false
+B06,9780061120084,A novel about racial injustice and childhood in Alabama.,false
+B07,9780547928227,A fantasy adventure involving a journey and a dragon.,false
+B08,9780743273565,"A novel about wealth, ambition, and relationships.",false

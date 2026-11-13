@@ -1,0 +1,18 @@
+{
+  "before": {
+    "model_calls": 8,
+    "tool_calls": 8,
+    "input_tokens": 2943,
+    "output_tokens": 312,
+    "cost_usd": 0.000123606,
+    "seconds": 12.426798166998196
+  },
+  "after": {
+    "model_calls": 8,
+    "tool_calls": 3,
+    "input_tokens": 2943,
+    "output_tokens": 312,
+    "cost_usd": 0.000123606,
+    "seconds": 7.604146291996585
+  }
+}

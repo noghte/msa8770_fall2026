@@ -1,0 +1,9 @@
+id,isbn,note,expected_relevant,relevant,title,publish_date,number_of_pages
+B01,9781491957660,Python tools for manipulating and analyzing datasets.,true,True,"Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython","Oct 20, 2017",550
+B02,9781449373320,"Storage systems, distributed data, and reliable data applications.",true,True,"Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems","Apr 02, 2017",624
+B03,9781492032649,Building and training machine learning models.,true,True,"Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow","Oct 15, 2019",856
+B04,9780451524935,A dystopian novel about surveillance and political control.,false,False,,,
+B05,9780141439518,"A novel about courtship, family, and social class.",false,False,,,
+B06,9780061120084,A novel about racial injustice and childhood in Alabama.,false,False,,,
+B07,9780547928227,A fantasy adventure involving a journey and a dragon.,false,False,,,
+B08,9780743273565,"A novel about wealth, ambition, and relationships.",false,False,,,
